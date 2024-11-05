@@ -1,0 +1,7 @@
+<h1>Seasonal Flavors</h1>
+<ul>
+    {% for flavor in flavors %}
+        <li>{{ flavor.name }} - {{ flavor.description }} - Seasonal: {{ flavor.is_seasonal }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'add_flavor' %}">Add New Flavor</a>

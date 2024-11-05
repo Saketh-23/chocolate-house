@@ -1,0 +1,22 @@
+<!-- chocoapp/templates/chocoapp/suggestion_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Suggestions</title>
+</head>
+<body>
+    <h1>Customer Suggestions</h1>
+    <ul>
+        {% for suggestion in suggestions %}
+            <li>
+                {{ suggestion.customer_name }} suggested {{ suggestion.suggested_flavor }} <br>
+                <strong>Allergy Concern:</strong> {{ suggestion.allergy_concern }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_suggestion' %}">Add New Suggestion</a>
+    <br>
+    <a href="{% url 'flavor_list' %}">Back to Flavors</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!-- chocoapp/templates/chocoapp/add_suggestion.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Suggestion</title>
+</head>
+<body>
+    <h1>Add New Customer Suggestion</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Suggestion</button>
+    </form>
+    <br>
+    <a href="{% url 'suggestion_list' %}">Back to Suggestions</a>
+</body>
+</html>

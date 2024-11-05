@@ -1,0 +1,18 @@
+<!-- chocoapp/templates/chocoapp/add_flavor.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Flavor</title>
+</head>
+<body>
+    <h1>Add New Flavor</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Flavor</button>
+    </form>
+    <br>
+    <a href="{% url 'flavor_list' %}">Back to Flavors</a>
+</body>
+</html>

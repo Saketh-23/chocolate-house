@@ -1,0 +1,16 @@
+<!-- chocoapp/templates/chocoapp/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chocolate House</title>
+</head>
+<body>
+    <h1>Welcome to the Chocolate House!</h1>
+    <ul>
+        <li><a href="{% url 'flavor_list' %}">View Seasonal Flavors</a></li>
+        <li><a href="{% url 'ingredient_list' %}">View Ingredients</a></li>
+        <li><a href="{% url 'suggestion_list' %}">View Customer Suggestions</a></li>
+    </ul>
+</body>
+</html>

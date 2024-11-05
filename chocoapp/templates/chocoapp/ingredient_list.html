@@ -1,0 +1,21 @@
+<!-- chocoapp/templates/chocoapp/ingredient_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingredient Inventory</title>
+</head>
+<body>
+    <h1>Ingredient Inventory</h1>
+    <ul>
+        {% for ingredient in ingredients %}
+            <li>
+                {{ ingredient.name }} - {{ ingredient.quantity }} {{ ingredient.unit }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_ingredient' %}">Add New Ingredient</a>
+    <br>
+    <a href="{% url 'flavor_list' %}">Back to Flavors</a>
+</body>
+</html>
